@@ -56,15 +56,63 @@
 		60310D8D2A1FECA100D14494 /* RandomContacts */ = {
 			isa = PBXGroup;
 			children = (
-				60310D8E2A1FECA100D14494 /* AppDelegate.swift */,
-				60310D902A1FECA100D14494 /* SceneDelegate.swift */,
-				60310D922A1FECA100D14494 /* ViewController.swift */,
-				60310D942A1FECA100D14494 /* Main.storyboard */,
-				60310D972A1FECA200D14494 /* Assets.xcassets */,
-				60310D992A1FECA200D14494 /* LaunchScreen.storyboard */,
-				60310D9C2A1FECA200D14494 /* Info.plist */,
+				60310DA72A1FECF500D14494 /* Storyboards */,
+				60310DA62A1FECE800D14494 /* Services */,
+				60310DA52A1FECE000D14494 /* Models */,
+				60310DA42A1FECD800D14494 /* Resources */,
+				60310DA32A1FECCD00D14494 /* ViewControllers */,
+				60310DA22A1FECB600D14494 /* App */,
 			);
 			path = RandomContacts;
+			sourceTree = "<group>";
+		};
+		60310DA22A1FECB600D14494 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				60310D8E2A1FECA100D14494 /* AppDelegate.swift */,
+				60310D902A1FECA100D14494 /* SceneDelegate.swift */,
+				60310D9C2A1FECA200D14494 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		60310DA32A1FECCD00D14494 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				60310D922A1FECA100D14494 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		60310DA42A1FECD800D14494 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60310D972A1FECA200D14494 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		60310DA52A1FECE000D14494 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		60310DA62A1FECE800D14494 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		60310DA72A1FECF500D14494 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				60310D942A1FECA100D14494 /* Main.storyboard */,
+				60310D992A1FECA200D14494 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +337,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8596MXNNFG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomContacts/Info.plist;
+				INFOPLIST_FILE = RandomContacts/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +350,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Home.RandomContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +368,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8596MXNNFG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomContacts/Info.plist;
+				INFOPLIST_FILE = RandomContacts/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +381,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Home.RandomContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
