@@ -8,31 +8,25 @@
 import UIKit
 
 final class ContactListViewController: UITableViewController {
-    
-    private let contactList = Person.getContactList()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
-    
-    //MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-     
-}
-    // MARK: - UITableViewDataSource
-extension ContactListViewController {
+
+    // MARK: - Table view data source
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        contactList.count
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contact", for: indexPath)
-        let contact = contactList[indexPath.row]
-        var content = cell.defaultContentConfiguration()
-        content.text = "\(contact.name ?? "") \(contact.lastname ?? "")"
-        cell.contentConfiguration = content
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
         return cell
     }
 }
