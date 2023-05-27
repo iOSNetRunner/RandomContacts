@@ -6,12 +6,16 @@
 //
 
 struct Person {
-    let name: String!
-    let lastname: String!
-    let phoneNumber: String!
-    let email: String!
+    let name: String
+    let lastname: String
+    let phoneNumber: String
+    let email: String
     
-    static func getContactList() -> [Person] {
+    var fullName: String {
+        "\(name) \(lastname)"
+    }
+    
+    static func getPersonList() -> [Person] {
         var names = DataStore.shared.names
         var lastnames = DataStore.shared.lastnames
         var phoneNumbers = DataStore.shared.phoneNumbers

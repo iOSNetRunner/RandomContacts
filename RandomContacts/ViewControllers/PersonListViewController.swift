@@ -9,29 +9,31 @@ import UIKit
 
 final class PersonListViewController: UITableViewController {
     
-    private let contactList = Person.getContactList()
+    var personList: [Person]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let personDetailsVC = segue.destination as? PersonDetailsViewController else { return }
+        personDetailsVC.person = personList[indexPath.row]
     }
-     
 }
     // MARK: - UITableViewDataSource
 extension PersonListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        contactList.count
+        personList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
-        let contact = contactList[indexPath.row]
+        let contact = personList[indexPath.row]
         var content = cell.defaultContentConfiguration()
-        content.text = "\(contact.name ?? "") \(contact.lastname ?? "")"
+        content.text = "\(contact.name) \(contact.lastname)"
         cell.contentConfiguration = content
         return cell
     }
