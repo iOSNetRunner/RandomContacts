@@ -11,11 +11,6 @@ final class PersonListViewController: UITableViewController {
     
     var personList: [Person]!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
@@ -33,8 +28,11 @@ extension PersonListViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
         let contact = personList[indexPath.row]
         var content = cell.defaultContentConfiguration()
-        content.text = "\(contact.name) \(contact.lastname)"
+        content.text = "\(contact.fullName)"
+        content.image = UIImage(systemName: "person.fill")
         cell.contentConfiguration = content
+        cell.accessoryView?.layer.backgroundColor = UIColor.systemGreen.cgColor
+        
         return cell
     }
 }

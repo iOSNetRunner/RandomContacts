@@ -16,7 +16,6 @@ final class PersonDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGradientBackground()
         navigationItem.title = person.fullName
         phoneNumberLabel.text = person.phoneNumber
         emailLabel.text = person.email
