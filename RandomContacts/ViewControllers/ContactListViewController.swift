@@ -10,17 +10,17 @@ import UIKit
 final class ContactListViewController: UITableViewController {
     
     var contactList: [Person]!
-    
-    // MARK: - TableViewDataSource
-    
+}
+// MARK: - UITableViewDataSource
+extension ContactListViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         contactList.count
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         2
     }
-
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let contact = contactList[section]
         let title = contact.fullName
@@ -47,7 +47,6 @@ final class ContactListViewController: UITableViewController {
             var content = cell.defaultContentConfiguration()
             content.image = UIImage(systemName: "envelope.fill")
             content.text = contact.email
-            content.textProperties.minimumScaleFactor = 0.5
             cell.contentConfiguration = content
             
             return cell
